@@ -135,7 +135,7 @@ USE_TZ = True
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
-
+bseapp-5574.redis.dbs.scalingo.com
 REDIS_HOST = 'sanjeev.kr7454:vmUU@3eBWvUMCz!@bseapp-5574.redis.dbs.scalingo.com'
 REDIS_PORT = 30351
 

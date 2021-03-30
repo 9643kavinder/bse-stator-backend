@@ -6,7 +6,7 @@ from rest_framework import status
 from rest_framework.response import Response
 
 redis_instance = redis.StrictRedis(host=settings.REDIS_HOST,
-                                   port=settings.REDIS_PORT, db=0)
+                                   port=settings.REDIS_PORT, db=1)
 
 
 @api_view(['GET'])
