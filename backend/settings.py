@@ -129,14 +129,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-# DISABLE_COLLECTSTATIC=1
-# STATIC_URL = '/static/'
-STATIC_ROOT = 'staticfiles'
+DISABLE_COLLECTSTATIC=1
 STATIC_URL = '/static/'
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# STATIC_ROOT = 'staticfiles'
+# STATIC_URL = '/static/'
+#
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
 
 
 REDIS_HOST = 'sanjeev.kr7454:vmUU@3eBWvUMCz!@bseapp-5574.redis.dbs.scalingo.com'
