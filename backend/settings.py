@@ -80,18 +80,18 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 #
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-try:
-    database_url = os.environ["DATABASE_URL"]
-except KeyError:
-    database_url = "file:///{}".format(os.path.join(BASE_DIR, 'db.sqlite3'))
-
-DATABASES = { 'default': dj_database_url.config() }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+# try:
+#     database_url = os.environ["DATABASE_URL"]
+# except KeyError:
+#     database_url = "file:///{}".format(os.path.join(BASE_DIR, 'db.sqlite3'))
+#
+# DATABASES = { 'default': dj_database_url.config() }
 
 
 # Password validation
@@ -129,7 +129,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-DISABLE_COLLECTSTATIC=1
+# DISABLE_COLLECTSTATIC=1
 # STATIC_URL = '/static/'
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
