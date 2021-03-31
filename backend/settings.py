@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'k3_y5t%36g#8%uaec(-k#fv#-2tn9^0u0$=hlqr*_s==@gn(#h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['bseapp.osc-fr1.scalingo.io']
 
