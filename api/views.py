@@ -4,14 +4,16 @@ import redis
 from rest_framework.decorators import api_view
 from rest_framework import status
 from rest_framework.response import Response
-#
-# redis_instance = redis.StrictRedis(host=settings.REDIS_HOST,
-#                                    port=settings.REDIS_PORT, db=1)
 
-redis_instance = redis.StrictRedis(
-    host='redis-14645.c256.us-east-1-2.ec2.cloud.redislabs.com',
-    port='14645',
-    password='iUuy88i1Or9PYH02ttHFrQWoyJh49xTK')
+redis_instance = redis.StrictRedis(host=settings.REDIS_HOST,
+                                   port=settings.REDIS_PORT,
+                                   password=settings.REDIS_PASSWORD,
+                                   db=1)
+
+# redis_instance = redis.StrictRedis(
+#     host='redis-14645.c256.us-east-1-2.ec2.cloud.redislabs.com',
+#     port='14645',
+#     password='iUuy88i1Or9PYH02ttHFrQWoyJh49xTK')
 
 
 @api_view(['GET'])

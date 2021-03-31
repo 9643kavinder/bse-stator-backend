@@ -136,11 +136,12 @@ STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 # redis://sanjeev.kr7454:vmUU@3eBWvUMCz!@bseapp-5574.redis.dbs.scalingo.com:30351
-# REDIS_HOST = 'redis.us-east-1-1.ec2.cloud.redislabs.com:vmUU@3eBWvUMCz!@redis.us-east-1-1.ec2.cloud.redislabs.com'
-# REDIS_PORT = 30351
+REDIS_HOST = 'redis-14645.c256.us-east-1-2.ec2.cloud.redislabs.com'
+REDIS_PORT = '14645'
+REDIS_PASSWORD = 'iUuy88i1Or9PYH02ttHFrQWoyJh49xTK'
 
 
-CELERY_BROKER_URL = 'redis://redis.us-east-1-1.ec2.cloud.redislabs.com:vmUU@3eBWvUMCz!@redis.us-east-1-1.ec2.cloud.redislabs.com'
+CELERY_BROKER_URL = 'redis://iUuy88i1Or9PYH02ttHFrQWoyJh49xTK@redis-14645.c256.us-east-1-2.ec2.cloud.redislabs.com:14645'
 CELERY_TIMEZONE = 'Asia/Kolkata'
 CELERY_BEAT_SCHEDULE = {
     'send-notification': {
