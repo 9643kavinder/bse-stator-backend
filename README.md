@@ -11,8 +11,8 @@
 ### Simple Clone This Repo
 
 ```bash
-$git clone https://github.com/9643kavinder/DeepDiagnose.git
-cd 
+$git clone https://github.com/9643kavinder/bse-stator-backend.git
+cd bse-stator-backend
 pip install -r requirements.txt
 python manage.py runserver
 ```
@@ -20,4 +20,5 @@ python manage.py runserver
 ## Technologies Used
 * Backend
   * Django/Python
-  * Postgresql
+  * Redis
+  * Celery
