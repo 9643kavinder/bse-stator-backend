@@ -141,7 +141,7 @@ REDIS_PORT = '14645'
 REDIS_PASSWORD = 'iUuy88i1Or9PYH02ttHFrQWoyJh49xTK'
 
 
-CELERY_BROKER_URL = 'redis://iUuy88i1Or9PYH02ttHFrQWoyJh49xTK@redis-14645.c256.us-east-1-2.ec2.cloud.redislabs.com:14645/0'
+CELERY_BROKER_URL = 'redis://:v1VK1v4cPUaMArk5-Xs3@bseapp-5574.redis.dbs.scalingo.com:30351'
 CELERY_TIMEZONE = 'Asia/Kolkata'
 CELERY_BEAT_SCHEDULE = {
     'send-notification': {
