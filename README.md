@@ -1,6 +1,6 @@
 # bse-stator-backend
 
-Live URL : https://bseapp.osc-fr1.scalingo.io/api/ + {{ company-name }}
+Live URL : https://bseapp.osc-fr1.scalingo.io/api/ + {{ company-name }}</br>
 ###Example : https://bseapp.osc-fr1.scalingo.io/api/tata
 
 ## Description
