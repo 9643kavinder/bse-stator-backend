@@ -2,7 +2,6 @@ from __future__ import absolute_import, unicode_literals
 
 import os
 import json
-from celery import shared_task
 from django.conf import settings
 import redis
 from celery import Celery
@@ -19,10 +18,6 @@ app.autodiscover_tasks()
 
 @app.task(bind=True)
 def wake_up(self):
-    # redis_instance = redis.StrictRedis(
-    #     host='redis-14645.c256.us-east-1-2.ec2.cloud.redislabs.com',
-    #     port='14645',
-    #     Password='iUuy88i1Or9PYH02ttHFrQWoyJh49xTK')
     redis_instance = redis.StrictRedis(host=settings.REDIS_HOST,
                                        port=settings.REDIS_PORT,
                                        password=settings.REDIS_PASSWORD,
@@ -42,7 +37,7 @@ def wake_up(self):
                     "close": lst_info[7]
                 }
                 json_dct = json.dumps(dct)
-                redis_instance.set(lst_info[1], json_dct)
+                redis_instance.set(lst_info[0], json_dct)
 
 
 

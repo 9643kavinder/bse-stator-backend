@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 from celery.schedules import crontab
-import dj_database_url
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -87,12 +86,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-# try:
-#     database_url = os.environ["DATABASE_URL"]
-# except KeyError:
-#     database_url = "file:///{}".format(os.path.join(BASE_DIR, 'db.sqlite3'))
-#
-# DATABASES = { 'default': dj_database_url.config() }
+
 
 
 # Password validation
@@ -135,7 +129,7 @@ USE_TZ = True
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
-# redis://sanjeev.kr7454:vmUU@3eBWvUMCz!@bseapp-5574.redis.dbs.scalingo.com:30351
+
 REDIS_HOST = 'redis-14645.c256.us-east-1-2.ec2.cloud.redislabs.com'
 REDIS_PORT = '14645'
 REDIS_PASSWORD = 'iUuy88i1Or9PYH02ttHFrQWoyJh49xTK'
@@ -146,6 +140,6 @@ CELERY_TIMEZONE = 'Asia/Kolkata'
 CELERY_BEAT_SCHEDULE = {
     'send-notification': {
         'task': 'backend.celery.wake_up',
-        'schedule': 200.0,
+        'schedule': crontab(minute=0, hour=18),
     },
 }
