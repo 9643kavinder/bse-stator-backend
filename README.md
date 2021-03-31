@@ -1,6 +1,6 @@
 # bse-stator-backend
 
-Live URL : https://bseapp.osc-fr1.scalingo.io/api/{{ company-name }}
+Live URL : https://bseapp.osc-fr1.scalingo.io/api/ + {{ company-name }}
 
 ## Description
 • This app extacts the zip file from bse website, parse and store the data.</br>
