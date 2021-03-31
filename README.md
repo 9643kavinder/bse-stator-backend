@@ -3,19 +3,16 @@
 
 
 ## Description
-• It is the one stop solution for all the diagnostics.</br>
-• Brings unorganised diagnostic labs to a single platform.</br>
-• It provides access to nearby labs for the concerned assessment with the
-best prices guaranteed.</br>
+• This app extacts the zip file from bse website, parse and store the data.</br>
+• With the help of celery, task of extacting is scheduled at sharp 6pm(IST) everyday.</br>
+• Information of each company on bse can be visible for the current day.</br>
 
 ## Procedure
 ### Simple Clone This Repo
 
 ```bash
 $git clone https://github.com/9643kavinder/DeepDiagnose.git
-cd DeepDiagnose
-pipenv shell
-pipenv install
+cd 
 pip install -r requirements.txt
 python manage.py runserver
 ```
