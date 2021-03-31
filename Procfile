@@ -1,3 +1,2 @@
 web: gunicorn backend.wsgi --log-file -
-worker: celery worker --app=backend.celery.app
-beat: celery beat --app=backend.celery.app
+worker: celery -A backend.celery worker -B -l

@@ -26,7 +26,7 @@ def wake_up(self):
     redis_instance = redis.StrictRedis(host=settings.REDIS_HOST,
                                        port=settings.REDIS_PORT,
                                        password=settings.REDIS_PASSWORD,
-                                       db=1)
+                                       db=0)
     req = Request('https://www.bseindia.com/download/BhavCopy/Equity/EQ260321_CSV.zip', headers={'User-Agent': 'Mozilla/5.0'})
     with ZipFile(BytesIO(urlopen(req).read())) as my_zip_file:
         for contained_file in my_zip_file.namelist():

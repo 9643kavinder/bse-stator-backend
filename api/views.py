@@ -8,7 +8,7 @@ from rest_framework.response import Response
 redis_instance = redis.StrictRedis(host=settings.REDIS_HOST,
                                    port=settings.REDIS_PORT,
                                    password=settings.REDIS_PASSWORD,
-                                   db=1)
+                                   db=0)
 
 # redis_instance = redis.StrictRedis(
 #     host='redis-14645.c256.us-east-1-2.ec2.cloud.redislabs.com',
