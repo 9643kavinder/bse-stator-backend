@@ -8,6 +8,7 @@ from celery import Celery
 from zipfile import ZipFile
 from io import BytesIO
 from urllib.request import Request, urlopen
+from datetime import date
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.settings')
 app = Celery('backend')
@@ -22,7 +23,13 @@ def wake_up(self):
                                        port=settings.REDIS_PORT,
                                        password=settings.REDIS_PASSWORD,
                                        db=0)
-    req = Request('https://www.bseindia.com/download/BhavCopy/Equity/EQ260321_CSV.zip', headers={'User-Agent': 'Mozilla/5.0'})
+    today = str(date.today())
+    todays_date = list(today.split('-'))
+    todays_date.reverse()
+    dt = ""
+    for x in todays_date:
+        dt += x[-2:]
+    req = Request(f'https://www.bseindia.com/download/BhavCopy/Equity/EQ{dt}_CSV.zip', headers={'User-Agent': 'Mozilla/5.0'})
     with ZipFile(BytesIO(urlopen(req).read())) as my_zip_file:
         for contained_file in my_zip_file.namelist():
             for line in my_zip_file.open(contained_file).readlines():
